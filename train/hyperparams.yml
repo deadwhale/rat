@@ -1,0 +1,43 @@
+char_lstm_lite:
+  MAX: 50
+  EMB_LEN: 128
+  optimizer: [Adam, 1e-3]
+char_lstm_standart:
+  MAX: 100
+  EMB_LEN: 150
+  optimizer: [RMSprop, 1e-3]
+char_lstm_trip_standart:
+  arch: char_lstm_standart
+  optimizer: [Adam, 1e-3]
+  trips:
+    - !Emilia/ZMs
+    - !Lia....BHw
+    - !kit....tTk
+    - !boshiWllUE
+    - !Mira///H4Q
+    - !ChocoPOTIE
+    - !D3k0./L4kE
+    - !SHIKIKInC.
+char_lstm_trip_lite:
+  arch: char_lstm_trip_standart
+  EMB_LEN: 100
+  n_layers: 1
+  dropout: 0.4
+  optimizer: [Adam, 5e-4]
+piece_trf_fat:
+  MAX: 100
+  EMB_LEN: 200
+  optimizer: [Adam, 5e-4]
+  dropout: 0.4
+  nhead: 10
+  nhid: 512
+  nlayers: 8
+piece_trf_standart:
+  MAX: 50
+  EMB_LEN: 200
+  optimizer: [Adam, 1e-3]
+  dropout: 0.3
+  nhead: 10
+  nhid: 256
+  nlayers: 6
+  
